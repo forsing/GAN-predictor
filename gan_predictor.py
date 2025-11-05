@@ -10,6 +10,19 @@ Apple                          M1
 """
 
 
+"""
+Loto Skraceni Sistemi 
+https://www.lotoss.info
+ABBREVIATED LOTTO SYSTEMS
+"""
+
+
+"""
+svih 4506 izvlacenja
+30.07.1985.- 04.11.2025.
+"""
+
+
 import os
 import torch
 import torch.nn as nn
@@ -244,3 +257,4 @@ print()
 """
 Kombinacija 1: [ 4  6 x x x 22], 27
 """
+
