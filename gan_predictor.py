@@ -33,7 +33,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 
-def load_and_normalize_data(csv_file="/Users/milan/Desktop/GHQ/data/loto7h_4506_k87.csv"):
+def load_and_normalize_data(csv_file="/data/loto7h_4506_k87.csv"):
     
     df = pd.read_csv(csv_file, encoding="utf-8")
 
@@ -220,7 +220,7 @@ def fix_duplicates(row7):
 print()
 if __name__ == "__main__":
     train_gan_and_save(
-        csv_file="/Users/milan/Desktop/GHQ/data/loto7h_4506_k87.csv",
+        csv_file="/loto7h_4506_k87.csv",
         model_dir="gan_models",
         generator_file="G.pth",
         discriminator_file="D.pth",
@@ -242,5 +242,5 @@ if __name__ == "__main__":
         print(f"Kombinacija {i+1}: {reds}, {blue}")
 print()
 """
-Kombinacija 1: [ 4  6 13 19 20 22], 27
+Kombinacija 1: [ 4  6 x x x 22], 27
 """
