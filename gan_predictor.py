@@ -59,12 +59,12 @@ def load_and_normalize_data(csv_file="/data/loto7h_4506_k87.csv"):
     required_cols = [f"num{i}" for i in range(1, 7)] + ["num7"]
     for c in required_cols:
         if c not in df.columns:
-            raise ValueError(f"CSV中缺少必要列: {c}")
+            raise ValueError(f"CSV: {c}")
 
     all_draws = []
     for _, row in df.iterrows():
         reds = [row[f"num{i}"] for i in range(1, 7)]
-        reds.sort()  # 升序
+        reds.sort()  
         blue = row["num7"]
         draw = reds + [blue]
         all_draws.append(draw)
@@ -109,7 +109,7 @@ class Discriminator(nn.Module):
 
 
 def train_gan_and_save(
-    csv_file="/Users/milan/Desktop/GHQ/data/loto7h_4506_k87.csv",
+    csv_file="/data/loto7h_4506_k87.csv",
     model_dir="gan_models",
     generator_file="G.pth",
     discriminator_file="D.pth",
@@ -257,4 +257,5 @@ print()
 """
 Kombinacija 1: [ 4  6 x x x 22], 27
 """
+
 
