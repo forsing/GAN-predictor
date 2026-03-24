@@ -1,15 +1,6 @@
 # GAN predictor 
 # PyTorch
 
-
-"""        
-=== System Information ===
-Python version                 3.11.13        
-macOS Apple                    Tahos 
-Apple                          M1
-"""
-
-
 """
 Loto Skraceni Sistemi 
 https://www.lotoss.info
@@ -22,9 +13,6 @@ svih 4584 izvlacenja
 30.07.1985.- 20.03.2026.
 """
 
-"""
-v2: GHQ CSV + Powerball→num7; modeli u gan_predictor_v2_out (G_v2/D_v2); ~20k epoha; log ~25×; batch_size/z_dim iz argumenata.
-"""
 
 import os
 from pathlib import Path
@@ -50,7 +38,7 @@ torch.cuda.manual_seed_all(SEED) # ako koristiš više GPU-a
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
-_DEFAULT_CSV = "/Users/4c/Desktop/GHQ/data/loto7h_4584_k23.csv"
+_DEFAULT_CSV = "/data/loto7h_4584_k23.csv"
 # v2: modeli odvojeno od polaznog gan_models/
 _V2_MODEL_DIR = str(Path(__file__).resolve().parent / "gan_predictor_v2_out")
 
@@ -269,10 +257,9 @@ print()
 
 
 """
-Kombinacija 1: [ 4  6 x x x 22], 27Epoch [19200/20000] d_loss=1.3639, g_loss=0.6895
 Epoch [20000/20000] d_loss=1.3968, g_loss=0.6404
 GAN: G -> G_v2.pth, D -> D_v2.pth
-Kombinacija 1: [ 1  2 10 15 13 20], 32
+Kombinacija 1: [ 1  x y 15 13 z], 32
 
 
 
